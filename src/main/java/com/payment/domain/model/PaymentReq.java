@@ -18,10 +18,10 @@ public class PaymentReq {
     }
 
     public double deliverCharge(double amount) {
-        if (amount < 50) {
-            return 10;
-        } else if (amount >= 50 && amount < 100) {
-            return 5;
+        if (amount < 500) {
+            return 100;
+        } else if (amount >= 500 && amount < 1000) {
+            return 50;
         } else {
             return 0;
         }

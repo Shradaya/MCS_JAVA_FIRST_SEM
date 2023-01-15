@@ -13,7 +13,7 @@ public class CardPaymentSurchargeAdapter implements PaymentSurcharge {
         var intCardType = InputUtil.inputIntValue("From which card will you pay?\n" +
                 "-----------------------------------------\n" +
                 "Enter 1 for  Master Card\n" +
-                "Enter 2 for  Visit Card\n" +
+                "Enter 2 for  Visa Card\n" +
                 "Enter 3 for  Amex Card\n" +
                 "Enter 4 for  Gift Card\n"
         );
@@ -25,10 +25,11 @@ public class CardPaymentSurchargeAdapter implements PaymentSurcharge {
     private double getChargeFrom(double amount, CardPaymentType cardPaymentType) {
         switch (cardPaymentType) {
             case MASTER_CARD:
-            case VISIT_CARD:
-                return (amount * 1.5) / 100;
+                return (amount*2.5) / 100;
+            case VISA_CARD:
+                return (amount * 2.5) / 100;
             case AMEX_CARD:
-                return (amount * 3) / 100;
+                return (amount * 5) / 100;
             case GIFT_CARD:
                 return 0.0;
         }

@@ -7,7 +7,7 @@ import java.util.Map;
 
 public enum CardPaymentType {
     MASTER_CARD(1),
-    VISIT_CARD(2),
+    VISA_CARD(2),
     AMEX_CARD(3),
     GIFT_CARD(4);
     private final int value;
