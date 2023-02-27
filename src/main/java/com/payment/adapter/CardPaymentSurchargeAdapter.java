@@ -12,10 +12,10 @@ public class CardPaymentSurchargeAdapter implements PaymentSurcharge {
     public SurchargeResponse calculateSurcharge(double amount) {
         var intCardType = InputUtil.inputIntValue("From which card will you pay?\n" +
                 "-----------------------------------------\n" +
-                "Enter 1 for  Master Card\n" +
-                "Enter 2 for  Visa Card\n" +
-                "Enter 3 for  Amex Card\n" +
-                "Enter 4 for  Gift Card\n"
+                "1. Master Card\n" +
+                "2. Visa Card\n" +
+                "3. Amex Card\n" +
+                "4. Gift Card\n"
         );
         var cardPaymentType = CardPaymentType.valueOf(intCardType);
         var surchargeAmt = getChargeFrom(amount, cardPaymentType);

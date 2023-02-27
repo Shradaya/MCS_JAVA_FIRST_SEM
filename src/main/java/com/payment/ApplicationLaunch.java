@@ -12,8 +12,8 @@ public class ApplicationLaunch {
         PaymentUseCase paymentUseCase = new PaymentInteractor();
         var intPaymentType = InputUtil.inputIntValue("Enter the following\n" +
                 "-----------------------------------------\n" +
-                " 1. Enter 1 for Cash Payment\n" +
-                " 2. Enter 2 for Card Payment");
+                " 1. Cash Payment\n" +
+                " 2. Card Payment");
         var paymentType = PaymentType.valueOf(intPaymentType);
         var amount = InputUtil.inputDoubleValue("Enter the amount you want to calculate\n" +
                 "-----------------------------------------");
